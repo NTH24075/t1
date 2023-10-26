@@ -15,7 +15,8 @@ int main()
 	}
 	n=ve.size();
 	int d=abs(ve[1]-ve[0]),res=0;
-	if(d==0){
+	if(d==0)
+	{
 		cout<<"0";
 		return 0;
 	}
@@ -28,12 +29,11 @@ int main()
 	    else {
 	    	d=Gcd(m1,m2);
 		}
-	}	
-	cout<<d<<" ";
-	
+	}		
+	//cout<<d<<" ";
 	for(int i=1;i<n;i++)
 	{
-		res+=((ve[i]-ve[i-1])/d-1);
+		res+=(abs(ve[i]-ve[i-1])/d-1);
 		}	
 		cout<<res;
 }
